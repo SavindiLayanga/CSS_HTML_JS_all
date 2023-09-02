@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        /* positions */
+
+        /* 01.) static position -
+                    default position eka thamai meka */
+
+        /* 02.) relative positiom -
+                    original position ekata anuwa thama wenas wenne */
+        .div1{
+            width: 100px;
+            height: 100px;
+            background-color: #ff4d96;
+            position: relative;
+            left: 100px;
+            top: 100px;
+        }
+
+        /* 03.) absolute position -
+                    "parent" ge position eka anuwa thamai wenas wenn */
+        section{
+            width: 200px;
+            height: 200px;
+            border: 1px solid purple;
+
+        }
+        .div2{
+            width: 100px;
+            height: 100px;
+            background-color: #ffca3a;
+            left: 500px;
+            bottom: 400px;
+        }
+
+        main{
+
+        }
+    </style>
+</head>
+<body>
+<div class="div1">
+    <p> relative position</p>
+</div> <br>
+<main>
+    <section>
+        <div class="div2">
+            <p> absolute position </p>
+        </div>
+    </section>
+</main>
+
+
+
+</body>
+</html>

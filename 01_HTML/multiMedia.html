@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name ="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<!--******************  add a image  **************************-->
+<img
+        src="../assets/images/large.jpg"
+        title="iphone 14" alt="iphone"
+        width="500"
+>
+<hr>
+
+<!-- *******************  adding responsive image  *************************** -->
+<img
+        srcset="../assets/images/small.jpg.jpg 480w, ../assets/images/medium.jpg 800w"
+        sizes="(max-width: 1000px) 800px, (max-width: 500px) 440px"
+        src="../assets/images/medium.jpg"
+        title="iphone 14"
+        alt="iphone"
+>
+<hr>
+
+<picture>
+    <source media="(main-width:500)" srcset="../assets/images/large.jpg">
+    <source media="(main-width:800)" srcset="../assets/images/medium.jpg">
+    <img src="../assets/images/small2.jpg" title="iphone 14" alt="iphone">
+</picture>
+
+<hr>
+
+<!---****************************  adding a video  *****************-->
+
+<video src="../assets/videos/car.mp4" controls>
+    <p>
+        plz visit www.ijse.lk to watch this video      // video eka support naththan meka display wenawa
+    </p>
+</video>
+
+<hr>
+
+<video src="../assets/videos/car.mp4" controls="true">     //  default
+     <source src="../assets/videos/car.mp4" type="video/mp4">
+     <source src="../assets/videos/car.webm" type="video/webm">     // video eka damage wela nn webm eka wada
+     <p>
+         plz visit www.ijse.lk to watch this video       // web ekath damage wela nn error message eka pennnawa
+     </p>
+ </video>
+
+<hr>
+
+<!-- autoplay and mute the video -->
+
+<video
+        src="../assets/videos/car.mp4" autoplay muted>
+</video>
+
+<hr>
+
+<video
+    autoplay
+    muted
+    controls
+    loop
+    poster="../assets/images/car-post.png"
+    width="700px"
+    height="400px"
+    preload="auto">
+
+    <source src="../assets/videos/car.mp4" type="video/mp4">
+    <source src="../assets/videos/car.webm" type="video/webm">
+    <track label="English" kind="subtitles" src="../assets/videos/subtitles/sample.vtt">
+    <track label="Arabic" kind="subtitles" src="../assets/videos/subtitles/sample.vtt">
+    <p>
+        plz visit www.ijse.lk to watch this video
+    </p>
+</video>
+<hr>
+<!-- set audio -->
+<audio controls>
+    <source src="../assets/audios/audio_file2.mp3">
+</audio>
+
+</body>
+</html>

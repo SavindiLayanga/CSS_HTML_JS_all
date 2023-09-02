@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex box</title>
+    <style>
+        #section1{
+            width: 1000px;
+            height: 500px;
+            border: 2px solid orangered;
+            display: flex; /* default eka row nisa row ekak widihata enne */
+            /*flex-direction: column; !* pallehata coloumwa walin enawa *!*/
+            flex-direction: column-reverse; /* column widihata yata idan udata (reverse ) */
+        }
+
+        #section2{
+            width: 1000px;
+            height: 500px;
+            border: 2px solid orangered;
+            display: flex;
+            margin-top: 10px;
+
+            align-items: center; /* column ekaka nam eke madata / row ekak nam eke madata */
+            justify-content: center; /* hari madata genawa */
+            justify-content: flex-end; /* anthima kone mada */
+        }
+
+        #section3{
+            width: 1000px;
+            height: 500px;
+            border: 2px solid orangered;
+            display: flex;
+            margin-top: 10px;
+
+            /*justify-content: flex-end;*/
+            align-items: center;
+            /*justify-content: space-between; !* mada ida *!*/
+            justify-content: space-around; /* wateta ida */
+
+        }
+
+        #section4 {
+            width: 1000px;
+            height: 500px;
+            border: 2px solid orangered;
+            display: flex;
+            margin-top: 10px;
+        }
+
+        #section4>div:first-child{
+            align-self: self-start;
+        }
+
+        #section4>div:nth-child(2){
+            align-self: center;
+        }
+
+        #section4>div:last-child{
+            align-self: self-end;
+        }
+
+        section>div {
+            width: 100px;
+            height: 100px;
+            border: 1px solid green;
+            font-size: 50px;
+        }
+
+        section>div:first-child{
+            background-color: red;
+        }
+
+        section>div:nth-child(2){
+            background-color: dodgerblue;
+        }
+
+        section>div:last-child{
+            background-color: gold;
+        }
+    </style>
+
+</head>
+<body>
+<section id="section1">
+    <div> A </div>
+    <div> B </div>
+    <div> C </div>
+</section>
+
+<section id="section2">
+    <div> A </div>
+</section>
+
+<section id="section3">
+    <div> A </div>
+    <div> B </div>
+    <div> C </div>
+</section>
+
+<section id="section4">
+    <div> A </div>
+    <div> B </div>
+    <div> C </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+      div{
+          width: 200px;
+          aspect-ratio: 1/1;
+          background-color: #ffca3a;
+          /*transition-duration:3s ;*/
+          transition-property: width, background-color;
+          /*transition-timing-function: ease-in;  !*default *!*/
+          /*transition-timing-function: ease-out;*/
+          /*transition-timing-function: ease-in-out;*/
+          transition-timing-function: linear;  /* start ekai end ekai 2ma ekama wegen yanawa */
+      }
+
+      div:hover{
+          width: 400px;
+          background-color: rebeccapurple;
+          /*border-radius: 100%;*/  /*raumak wenawa */
+          transform: rotate(30deg);
+          transition-duration:3s;
+      }
+
+  </style>
+</head>
+<body>
+<div></div>
+
+</body>
+</html>

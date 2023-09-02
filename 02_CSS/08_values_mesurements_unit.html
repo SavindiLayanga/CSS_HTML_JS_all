@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">  /*
+<head>
+    <meta charset="UTF-8">
+    <title>measurements unit</title>
+                              <!--    ************** measurements units ***************-->
+    <style>
+        /*  01.  relative measurements units
+            - cm
+            - mm
+            - inch
+            - pc
+            - pt
+            - px  */
+        div{
+            background-color: darkcyan;
+            width: 250px;
+            height:100px;
+        }
+
+        /*  02.  absolute measurements units
+            - vw = viewport width
+            - vh = viewport height
+            - em = equal measurement  --> default value - 16px
+            - rem = root equal mesurement  */
+        .div1{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            /*font-size: 5px;*/
+            /*font-size: 0.1cm; --->  1cm=16px*/
+            font-size: 2em;  /* 1em = parent value (meke child div class eka. eke parent section eka.section eke font size ekak thiye nn eka 2n guna karala  thamai ganne*/
+        /* section eketh naththan value ekak eket parent wena <main> ekata yanawa eketh naththan ehema ehema parent ewata gihin balanawa mukuth nathtyah<html> eke defaul eka gannawa*/
+        }
+        section{
+            font-size: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+<div>
+
+</div>
+<section>
+    <div class="div1">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto doloremque doloribus dolorum ducimus, explicabo fuga fugit in molestiae odio quaerat quibusdam repellendus repudiandae similique sint tenetur ullam vitae voluptatum. Rerum?</p>
+    </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        div{
+            width: 200px;
+            aspect-ratio: 1/1;
+            background-color: dodgerblue;
+            animation-duration: 3s; /*page eka load wela 3s athulatha pata nil idan dam wenawa */
+            animation-name: my-animations; /* meka damme nathi unoth yata karapu wenas kam penne na. @keyframe eke nama thamai methanata danne */
+            /*animation-direction: reverse; !* keyframe eka kohe idan kohatada yanne kiyala danaganna (passe idan issarahata enawa witharai  )*!*/
+            animation-direction: alternate; /* depaththatama wada karanawa */
+            /*animation-iteration-count: 3; !* run wena wara ganana *!*/
+            animation-iteration-count: infinite;  /* page eka display wela thiyenakanma wada */
+            /*animation-timing-function: linear; !* 2kama ekama wegen *!*/
+            /*animation-timing-function: ease-out;  !* start eka wegen end eka hemita *!*/
+            animation-timing-function: ease-in; /* start eka hemita end eka wegen */
+            animation-play-state: running;
+        }
+
+        @keyframes my-animations {
+            from{
+                background-color: dodgerblue;
+                margin-left: 0px;
+            }
+            to{
+                background-color: #3A1078;
+                width: 200px; /*page eka load wela 3s athulatha 200px idan 400px wenawa */
+                margin-left: 300px;
+
+            }
+
+        }
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>

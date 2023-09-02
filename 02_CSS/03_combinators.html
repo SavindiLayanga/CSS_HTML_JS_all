@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>  /* last child */
+        h4:last-child{
+            color: red;
+        }
+
+    /* dicended combination =  dirrect wenna ona na kohe hari mulin innawa nn apply karanawa */
+    section h4:first-child{
+        color: lightgreen;
+    }
+
+    h4+div{   /* aniwaren h4 ta passe div thiyenna ona */
+        color: lawngreen;
+    }
+
+    /*h4~div{*/
+    /*    color: lightpink;*/
+    /*}*/
+
+    /* general sibling combinator = select the element which is located after given first element */
+    h4~h1{   /* h4 ta passe h1 aniwaren thiyenna ona na kohe thibbath apply wenawa  */
+        color: #ff4d96;
+    }
+
+    </style>
+</head>
+<body>
+
+<section>        <!-- adala parent ge idan dirrect ona wena child kenek connect karaganna -->
+  <h4>Hello CSS</h4>  <!
+  <div>
+    <h4>CSS Content</h4>
+    <div>Intro</div>
+    <div>Basics</div>
+  </div>
+    <h4> Hello </h4>
+</section>
+<hr>
+
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS cascade</title>
+  <style>
+    button{
+        color: red;
+    }
+    .btn{         /* class ekaka weight eka wadi ekai button font eka orange wenne */
+        color: orange;
+    }
+    /*---------------------------------------------------*/
+
+    ul>li{
+        color: red;
+    }
+    ol>li>ul>li{
+        color: blue;
+    }
+    ol>li>ul>li:first-child{  /* 1 0 0 0 */
+        color: red;     /* list eka athule thiyena ul eke palaweni element eka red */
+    }
+  </style>
+</head>
+<body>
+<button class="btn" type="button">Click Me</button>
+<ol>
+    <li>
+        Java
+        <ul>
+            <li>Basics</li>
+            <li>Advanced</li>
+        </ul>
+    </li>
+    <li>js</li>
+    <li>Go Lang</li>
+</ol>
+</body>
+</html>

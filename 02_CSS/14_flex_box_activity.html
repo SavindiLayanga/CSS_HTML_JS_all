@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #section4 {
+            width: 1000px;
+            height: 500px;
+            border: 2px solid orangered;
+            display: flex;
+            margin-top: 10px;
+            justify-content: space-around;
+        }
+
+        section>div {
+            width: 200px;
+            height: 150px;
+            /*border: 1px solid green;*/
+            font-size: 50px;
+        }
+
+        #section4>div:first-child{
+            align-self: self-start;
+            background-color: pink;
+            /*box-shadow: pink 0px 5px 10px 0px;*/
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+        }
+
+        #section4>div:nth-child(2){
+            align-self: center;
+            background-color: pink;
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+
+        }
+
+        #section4>div:nth-child(3){
+            align-self: flex-end;
+            background-color: #ff4d96;
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+        }
+
+        #section4>div:nth-child(4){
+            align-self: center;
+            background-color: deeppink;
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+        }
+
+        #section4>div:nth-child(5){
+            align-self: self-start;
+            background-color: orangered;
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+        }
+
+        #section4>div:last-child{
+            align-self: center;
+            background-color: rosybrown;
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+        }
+
+    </style>
+</head>
+<body>
+<section id="section4">
+    <div> </div>
+    <div> </div>
+    <div> </div>
+    <div> </div>
+    <div> </div>
+    <div> </div>
+</section>
+
+</body>
+</html>

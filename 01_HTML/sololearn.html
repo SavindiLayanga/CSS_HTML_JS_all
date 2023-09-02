@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>product</title>
+</head>
+
+<body>
+<header style="background-color: #ffca3a">
+    <h1>New awsem product</h1>
+</header>
+<main>
+    <section>
+        <img src="FB_IMG_1689678930510.jpg" alt="Example Image">
+        <p>Introducing our <b>latest products</b>, designed to make your life easier and more efficient.</p>
+        <ul>
+            <li>fegure 1</li>
+            <li>fegure 2</li>
+            <li>fegure 3</li>
+        </ul>
+
+        <h2>Order now!</h2>
+
+        <label for="size">Size:</label>
+        <select id="size" name="size" required>
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+        </select>
+
+        <label for="color">Color:</label>
+        <select id="color" name="color" required>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+        </select><br> <br>
+
+        <form action="/submit" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+
+            <button class="submit-button" onclick="handleButtonClick()">Submit</button>
+            <style>
+                .submit-button{
+                    background-color: black;
+                    border: none;
+                    border-radius: 5px;
+                    color:#ffffff;
+                }
+            </style>
+            <script>
+                function handleButtonClick(){
+                    alert("Order confirmed!");
+                }
+            </script>
+        </form>
+    </section>
+</main>
+<footer style="background-color: #ffca3a">
+    <p><b>Made by Savindi Layanga</b></p>
+</footer>
+</body>
+</html>

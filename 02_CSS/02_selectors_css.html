@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        /* type selector */
+        h1{
+            color: #3A1078;
+        }
+
+        /* id selector */
+        #subtopic1{
+            color: deeppink;
+        }
+        #subtopic2{
+            color: red;
+        }
+        #subtopic3{
+            color: forestgreen;
+        }
+        #subtopic4{
+            color: darkblue;
+        }
+
+        /* class selector */
+        .mystyle{
+            background-color: aquamarine;
+        }
+        .mystyle2{
+            font-weight: bold;
+        }
+
+        /* Universal selector ( *=all )*/
+        /* *{
+            color: crimson;
+        }*/
+
+        /*Attribute selector */
+             /* attribute selector only with attribute [] */
+        [name]{
+            color: crimson;
+        }
+
+        /* attribute selector with attribute with value [=] */
+        [name="js"]{
+           font-weight: bold;
+        }
+        [href^="https"]{
+            font-weight: lighter;
+        }
+        [href^="http"]{
+            background-color: yellow;
+        }
+        [href $= ".lk"]{
+            color: red;
+        }
+
+        /* attribute selector with given value snippet ( *=)  */
+        [href *= "https"]{
+            background-color: lightcoral;
+        }
+
+        /*attribute selector with given word (......value eka verb ekak widihata thiyenna link eka color wenawa  .....) (~=) */
+        [href~="students"]{
+            background-color: lightpink;
+        }
+
+        /*attribute selector with type selector */
+        li[name="google"]{
+            background-color: yellow;
+        }
+
+        /* attribute selector with class selector */
+        .mystyle[name]{     /*mystyle class ekaka dapu name attribute eka dapu ewa check karanawa */
+            background-color: lightseagreen;
+        }
+
+        /* pseudo selector */
+        /* class = mouse eka h1 udata giyama color red wenawa */
+        h1:hover{
+            color: red;
+            cursor: pointer;
+        }
+
+        /* element = click karaddi color wenas wenawa */
+        h1:active{
+            color: greenyellow;
+        }
+
+        /*visited - apply styles to already visited links */
+        a:visited{  /*kalin click karapu link red wenawa */
+            color: red;
+        }
+
+        /* :link - apply to non visited links */
+        a link {
+            color: lightpink;
+        }
+
+        /* first child of parents */
+        li:first-child{
+            color: gray;
+        }
+
+        /* last child parents */
+        li:last-child{
+            color: deepskyblue;
+        }
+
+        /* selelct any element use element number */
+        li:nth-child(3){
+            color: red;
+        }
+
+        h4:nth-last-child(2){
+            background-color:linen;
+        }
+        h3:first-child{
+            background-color: lightblue;
+        }
+        h3:last-child{
+            background-color: lightblue;
+        }
+        li:only-child{   /*section kiyana parent athue ek child kenek inn ewat witharai  meka apply wenne */
+            color: green;
+        }
+
+        ol>li:first-child{
+            color: yellow;
+        }
+
+        h1::before{   /* add imoji  */
+            content: "🤣";
+        }
+
+        h1::after{   /* add imoji  */
+            content: "🤣";
+        }
+
+        h3::first-letter{  /* first akura red */
+            color: red;
+        }
+
+        p::first-line{  /* first line eka green */
+            color: green;
+        }
+
+        input::placeholder{  /* change placeholder akuru */
+            color: red;
+        }
+
+        input::file-selector-button{ /* button background eka thabili */
+            background-color: orangered;
+        }
+
+        p::selection{  /* select karana akuru black */
+            color: black ;
+        }
+        ::marker{
+            content: " 🍕";
+        }
+
+        input::file-selector-button:hover{
+            background-color: beige;
+        }
+
+        /* Group selector */
+        h1,h3,h4, #subtopic1, .mystyle{  /* duplicate nathi karaganna use karanawa */
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+<h1>Internet Technologies</h1>
+
+<h2>
+    <a href="http://google.com" name="google"> Google </a>
+    <a href="https://ibm.com" name="css"> IBM </a>   <!-- 2 section eke thiyenne -->
+    <a href="https://ijse.lk"> IJSE</a>
+    <a href="http://ijsestudents.lk"> IJSE Students</a>
+    <a href="http://ijse students .lk"> IJSE</a>
+</h2>
+
+<h4>
+    <a href="https://youtube.com"> Youtube</a>
+</h4>
+
+<h3 id="subtopic1">Content</h3>
+<ol>
+    <li name="google">HTML</li>
+    <li>
+        CSS
+        <ol>
+            <li>Introduction to CSS</li>
+            <li>History of CSS</li>
+            <li>CSS Rule</li>
+            <li>CSS Selectors</li>
+            <li>Other CSS Topics...</li>
+        </ol>
+    </li>
+    <li>JS</li>
+</ol>
+
+<h4>IJSE 1</h4>
+<h4>IJSE 2</h4>
+<h4>IJSE 3</h4>
+<h4>IJSE 4</h4>
+<h4>IJSE 5</h4>
+
+<section name="html">
+    <h3 id="subtopic2" class="mystyle">HTML</h3>
+    <p class="mystyle mystyle2">  <!-- ona tharan mewa danna puluwan space thiya thiya -->
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. At corporis debitis explicabo fugiat ipsum iste non, perferendis praesentium recusandae vero. Adipisci corporis dolores est ex fuga tempore voluptatem voluptates voluptatibus.
+    </p>
+</section >
+
+<section name="css">
+    <h3 id="subtopic3">CSS</h3>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. At corporis debitis explicabo fugiat ipsum iste non, perferendis praesentium recusandae vero. Adipisci corporis dolores est ex fuga tempore voluptatem voluptates voluptatibus.
+    </p>
+</section>
+
+<section>
+    <h3 id="subtopic4" class="mystyle" name="js">JS</h3>
+    <p class="mystyle">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. At corporis debitis explicabo fugiat ipsum iste non, perferendis praesentium recusandae vero. Adipisci corporis dolores est ex fuga tempore voluptatem voluptates voluptatibus.
+    </p>
+</section>
+
+<form action="">
+    <h3>Contact us </h3>
+    <label for="fname">First Name</label>
+    <input type="text" name="fname" id="fname" placeholder="First Name">
+    <br>
+
+    <label for="lname">Last Name</label>
+    <input type="text" name="fname" id="lname" placeholder="Last Name">
+    <br>
+
+    <label for="email">Email</label>
+    <input type="text" name="email" id="email" placeholder="Email">
+    <br>
+
+    <label for="message"> Message</label>
+    <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+    <br>
+
+    <input type="file"> <br>
+    <button name="btn" value="submit"> Submit</button>
+    <button name="btn" value="reset"> Reset </button>
+
+
+</form>
+</body>
+</html>

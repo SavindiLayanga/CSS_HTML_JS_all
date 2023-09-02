@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>print layout</title>
+
+    <style>
+        body>div{
+            width: 1000px;
+            height: 500px;
+            border: 5px solid orange;
+            display: grid;  /* 2.) meka dammama iri tika wen wela samana kotas walata bedenawa */
+            /*grid-template-columns: 1fr 1fr 1fr;  !* 03.) fr = fraction  --> fr*3 = bhaga bhaga 3 kta bedanawa.ethakota kotas 6 *!*/
+            grid-template-columns: repeat(3,1fr);
+            /*grid-template-rows: 1fr 1fr;*/
+            grid-template-rows: repeat(2,1fr);
+        }
+
+        body>div>div{
+            border: 2px solid plum;  /* 1.) width & height ekak nathi nisa serama border tika ekata alila loku irak pennanawa. */
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div> </div>
+    <div> </div>
+    <div> </div>
+
+    <div> </div>
+    <div> </div>
+    <div> </div>
+</div>
+
+</body>
+</html>

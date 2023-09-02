@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>travesing</title>
+
+    <style>
+        ul>li:first-child ol>li:nth-child(2){
+            color: orange;
+        }
+        ul>li:first-child ol>li:first-child{
+            color: red;
+        }
+        ul>li:first-child ol>li:nth-child(3){
+            color: deeppink;
+        }
+        ul>li:first-child ol>li:nth-child(4){
+            color: deeppink;
+        }
+        ul>li:nth-child(2) ol>li:first-child ol>li:nth-child(5){
+            color: green;
+        }
+        ul>li:nth-child(2) ol>li:first-child ol>li li:nth-child(2){
+            color: blue;
+        }
+    </style>
+
+    <!--  ///////////////////////////////////////////////////////////////////////////  -->
+
+</head>
+<body>
+<ul>
+    <li>Java
+        <ol>
+            <li>Java Basics</li>
+            <li>JavaEE</li>
+            <li>Java Spring Boot</li>
+            <li>MySQL</li>
+        </ol>
+    </li>
+    <li>UI Technology
+        <ol>
+            <li>HTML
+                <ol>
+                    <li>Introduction to HTML</li>
+                    <li>HTML Text Formatting</li>
+                    <li>
+                        HTML Multimedia
+                        <ul>
+                            <li>Add Image</li>
+                            <li>Add Video</li>
+                            <li>Add Audio</li>
+                        </ul>
+                    </li>
+                    <li>HTML Forms</li>
+                    <li>HTML Table</li>
+                </ol>
+            </li>
+            <li>CSS</li>
+            <li>JS</li>
+        </ol>
+    </li>
+    <li>AWS and ML</li>
+</ul>
+</body>
+</html>

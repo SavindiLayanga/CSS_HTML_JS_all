@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body>div{
+            width: 1500px;
+            height: 700px;
+            border: 5px solid purple;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(3,1fr);
+        }
+
+        body>div>div{
+            border: 2px solid black;
+        }
+
+        div>div:first-child{
+            background-color: orangered;
+            grid-column: 1/4;
+        }
+
+        div>div:nth-child(2){
+            background-color: green;
+        }
+
+        div>div:nth-child(3){
+            background-color: red;
+            grid-row: 2/4;
+        }
+
+        div>div:nth-child(4){
+            background-color: purple;
+        }
+
+        div>div:nth-child(5){
+            background-color: yellow;
+        }
+
+        div>div:nth-child(6){
+            background-color: blue;
+        }
+
+        div>div:nth-child(7){
+            background-color: brown;
+        }
+
+        div>div:nth-child(8){
+            background-color: green;
+        }
+
+        div>div:nth-child(9){
+            background-color: hotpink;
+        }
+
+        div>div:nth-child(10){
+            background-color: deepskyblue;
+            grid-column: 3/5;
+        }
+
+    </style>
+</head>
+<body>
+<div>
+    <div> </div>
+    <div> </div>
+    <div> </div>
+
+    <div> </div>
+    <div> </div>
+    <div> </div>
+
+    <div> </div>
+    <div> </div>
+    <div> </div>
+
+</div>
+
+</body>
+</html>
