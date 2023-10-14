@@ -15,6 +15,14 @@
     //session.storage
 
     //cookies
+    document.cookie = "class=ijse; expires=sat, 14 Oct 2023b08:16:00 UTC"
+    console.log(document.cookie);
+    var arr = document.cookie.split(";")
+    console.log(arr);
+    let index = arr.findIndex(r => {
+        return r.split("=")[0] === "class"
+    });
+    console.log(index);
 </script>
 </body>
 </html>
