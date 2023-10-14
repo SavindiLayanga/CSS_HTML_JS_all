@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>13 jQuery Select DOM</title>
+</head>
+<body>
+
+<h1>Welcome to Sri Lanka</h1>
+<h1>Welcome to Colombo</h1>
+
+<!--<section>-->
+<!--    <ul>-->
+<!--        <li>Java</li>-->
+<!--        <li>JS</li>-->
+<!--        <li>Python</li>-->
+<!--    </ul>-->
+<!--</section>-->
+<section>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus accusantium alias aliquam autem beatae, culpa doloribus facilis id magnam maxime quae qui quibusdam ratione sunt ullam voluptates. Dignissimos, molestias.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus accusantium alias aliquam autem beatae, culpa doloribus facilis id magnam maxime quae qui quibusdam ratione sunt ullam voluptates. Dignissimos, molestias.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus accusantium alias aliquam autem beatae, culpa doloribus facilis id magnam maxime quae qui quibusdam ratione sunt ullam voluptates. Dignissimos, molestias.</p>
+</section>
+
+<script src="assets/lib/jquery.min.js"></script>
+
+<script>
+
+  document.getElementsByTagName("h1")[0].innerText; // select first h1 element
+  $("h1").eq(0).text(); // select first h1 element
+  $("h1").eq(1).text(); // select second h1 element
+  $("h1").first().text();  // select first h1 element
+  $("h1").last().text();  // select last h1 element
+
+
+  // $("h1").first().text("Hello");  // select first h1 element
+  // $("h1").last().text("hiiiiiii");  // select last h1 element
+
+</script>
+
+</body>
+</html>
