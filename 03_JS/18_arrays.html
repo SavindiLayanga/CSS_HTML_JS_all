@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>arrays</title>
+</head>
+<body>
+<script>
+
+    //Literals Based
+
+    var arr1 = [ ] ;
+    arr1 = [ 1, 2, true, functions, { }] ;
+
+    //constructor based array
+
+
+
+    //------------------------Array Methods--------------------------//
+
+    // push - array eke agata item ekka add karanawa
+    var arr3 = ["java", "python", "Go"," JavaScript" ];
+
+    arr3.push("css");   // ["java", "python", "Go"," JavaScript", "css" ];
+
+
+    //pop - array eke anthima item eka delete karanwa
+
+    //shift - array eke mula item eka remove karanawa
+
+    //concat - arrays kihipayak ekata ekathu karanna gannaw
+    var arr5 = [1,2,3,4,5];
+    var arr6 = [6,7,8,9,10];
+
+    arr5.concat(arr6);  // [1,2,3,4,5,6,7,8,9,10]
+
+    //slice - copy ekak denawa
+    var arr7 = [1,2,3,4,5,6,7,8,9,10];
+
+    arr7.slice(2); // [3,4,5,6,7,8,9,10];   -> 2 idan.......
+
+    arr7.slice(4); // [5,6,7,8,9,10];   ->  4 index eke idan .........
+
+    arr7.slice(2,6); // [3,4,5,6];   -> 2weni index eka ........ 6 weni index eka athara
+
+    arr7.slice(-1);  // [10]
+    arr7.slice(-2);  // [9, 10]
+    arr7.slice(-3);  // [8, 9, 10]
+    arr7.slice(-4);  // [7, 8, 9, 10]
+    arr7.slice(-5);  // [6, 7, 8, 9, 10]
+    arr7.slice(-6);  // [5, 6, 7, 8, 9, 10]
+    arr7.slice(-7);   // [4, 5, 6, 7, 8, 9, 10]
+    arr7.slice(-8);   // [3, 4, 5, 6, 7, 8, 9, 10]
+    arr7.slice(-9);   // [2, 3, 4, 5, 6, 7, 8, 9, 10]
+    arr7.slice(-10);  // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    arr7.slice(-11);  // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    arr7.slice(-12);  // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+    // splice - madata index ekak add karanna
+    const arr = [1, 2, 3, 4, 5];
+    arr.splice(2, 0, 6); // Adds 6 at index 2
+    console.log(arr); // Output: [1, 2, 6, 3, 4, 5]
+
+    arr7.splice(7);  // return
+    console.log(arr7);
+
+    // index of -
+    arr7.indexOf('IJSE');
+    arr7.indexOf('GDSE');
+    arr7.indexOf('HELLO');
+
+    arr7['hello', 'IJSE', 'GDSE', 'DEP','hello'];
+    arr7.indexOf('hello');
+    arr7.lastIndexOf("Hello");
+
+    //includes
+
+    // filter
+    arr7.filter();
+
+    //map
+    arr8=
+    arr8.map((result) =>{
+        console.log((result))
+    });
+
+    //for each
+    arr8.forEach((result) =>{
+        console.log((result))
+    });
+
+    //sort - piliwelata hadanawa
+
+
+    // some
+    arr8.some((item) => {
+        return item === 10;  // true
+    })
+
+    arr8.some((item) => {
+        return item === 100;  // false
+    })
+
+    arr8.some((item) => {
+        return item > 5;  // true
+    })
+
+    // every - some eke anith paththa
+    arr8.every((item) => {
+        return item > 5;  // false
+    })
+
+    // join
+    arr8.join();
+    '1,2,3,4,5,6,7,8,9,10'
+
+    arr8.join("->");
+    '1->2->3->4->5->6->7->8->9->10'
+
+    arr8.join(toString())
+
+</script>
+</body>
+</html>
