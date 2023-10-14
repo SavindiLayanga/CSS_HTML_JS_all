@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>21 Bootstrap Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/lib/normalize.css">
+    <link rel="stylesheet" href="assets/lib/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+
+        <!--form-->
+        <div class="col col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+
+            <div class="text-center">
+                <h3>Student Details</h3>
+            </div>
+
+            <form>
+                <div class="mb-3">
+                    <label for="student-id" class="form-label">ID</label>
+                    <input type="number" class="form-control" id="student-id">
+                </div>
+                <div class="mb-3">
+                    <label for="first-name" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="first-name">
+                </div>
+                <div class="mb-3">
+                    <label for="last-name" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="last-name">
+                </div>
+                <div class="mb-3">
+                    <label for="address" class="form-label">Address</label>
+                    <textarea class="form-control" placeholder="Enter your address" id="address"
+                              style="height: 100px"></textarea>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="GDSE"
+                           id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        GDSE
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="DEP"
+                           id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        DEP
+                    </label>
+                </div>
+
+                <div class="mt-3 mb-5">
+                    <button type="button" class="btn btn-success">Submit</button>
+                    <button type="button" class="btn btn-primary">Update</button>
+                    <button type="button" class="btn btn-danger">Delete</button>
+                    <button type="reset" class="btn btn-warning">Reset</button>
+                </div>
+
+            </form>
+
+        </div>
+        <!--tbl-->
+        <div class="col col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Address</th>
+                    <th>GDSE/DEP</th>
+                </tr>
+                </thead>
+                <tbody id="student-tbl-body"></tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+<script src="assets/lib/jquery.min.js"></script>
+
+<script src="assets/lib/bootstrap/js/bootstrap.min.js"></script>
+<script>
+
+    var row_index = null;
+
+    const clear = () => {
+        $("#student-id").val("");
+        $("#first-name").val("");
+        $("#last-name").val("");
+        $("#address").val("");
+        $(`input[name='flexRadioDefault'][value='DEP']`).prop("checked", true);
+    }
+
+    // submit
+    $("button[type='button']").eq(0).on("click", () => {
+        let student_id = $("#student-id").val();
+        let first_name = $("#first-name").val();
+        let last_name = $("#last-name").val();
+        let address = $("#address").val();
+        let program = $("input[name='flexRadioDefault']:checked").val();
+
+        console.log("PP", program)
+
+        let record = `<tr><td class="student_id">${student_id}</td><td class="first_name">${first_name}</td><td class="last_name">${last_name}</td><td class="address">${address}
+        </td><td class="program">${program}</td></tr>`;
+        $("#student-tbl-body").append(record);
+
+        // clear();
+        $("button[type='reset']").click();
+    });
+
+    // update
+    $("button[type='button']").eq(1).on("click", () => {
+
+        let student_id = $("#student-id").val();
+        let first_name = $("#first-name").val();
+        let last_name = $("#last-name").val();
+        let address = $("#address").val();
+        let program = $("input[name='flexRadioDefault']:checked").val();
+
+        let record = `<td class="student_id">${student_id}</td><td class="first_name">${first_name}</td><td class="last_name">${last_name}</td><td class="address">${address}
+        </td><td class="program">${program}</td>`;
+
+        $("tbody>tr").eq(row_index).html(record);
+
+        // clear();
+        $("button[type='reset']").click();
+    })
+
+    // delete
+    $("button[type='button']").eq(2).on("click", () => {
+        $("tbody>tr").eq(row_index).remove();
+    })
+
+    // reset
+    $("button[type='reset']").on("click", () => {
+        console.log("hello");
+    })
+
+    $("tbody").on("click", "tr", function() {
+        row_index = $(this).index();
+
+        console.log(row_index);
+
+        let student_id = $(this).find(".student_id").text();
+        let first_name = $(this).find(".first_name").text();
+        let last_name = $(this).find(".last_name").text();
+        let address = $(this).find(".address").text();
+        let program = $(this).find(".program").text();
+
+        $("#student-id").val(student_id);
+        $("#first-name").val(first_name);
+        $("#last-name").val(last_name);
+        $("#address").val(address);
+        $(`input[name='flexRadioDefault'][value='${program}']`).prop("checked", true);
+    })
+
+</script>
+
+</body>
+</html>
