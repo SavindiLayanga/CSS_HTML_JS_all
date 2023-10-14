@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>19 Objects in JS</title>
+</head>
+<body>
+
+
+<script>
+
+    // ------------- Object Literals  -------------
+    // create an object
+    let student = {
+        id: 1,
+        name: "Kavindu",
+        age: 28,
+        institue: "IJSE"
+    };
+    console.log(student); // {id: 1, name: 'Kavindu', age: 28, institue: 'IJSE'}
+
+    // access object values via keys
+    console.log(student.name); //'Kavindu'
+    console.log(student.id); //1
+    console.log(student.age); //28
+    console.log(student.institue); //IJSE
+
+    // update object
+    student.name = "Pathum";
+    student.age = 25;
+    console.log(student); // {id: 1, name: 'Pathum', age: 25, institue: 'IJSE'}
+
+    // ------------- Construtor Function  -------------
+    function Employee(id, name, age) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+    }
+
+    var employee = new Employee(1, "Kavindu", 28);
+    console.log(employee); // Employee {id: 1, name: 'Kavindu', age: 28}
+
+    // access object values via keys
+    console.log(employee.id); //1
+    console.log(employee.name); //'Kavindu'
+    console.log(employee.age); //28
+
+    // update object
+    employee.age=25;
+
+    // ------------- Class Syntax  -------------
+    class Person {
+        constructor(id, name, age) {
+            this.id = id;
+            this.name = name;
+            this.age = age;
+        }
+    }
+
+    var person = new Person(1, "Kavindu", 28);
+    console.log(person); // Person {id: 1, name: 'Kavindu', age: 28}
+
+    // access object values via keys
+    console.log(person.id); //1
+    console.log(person.name); //'Kavindu'
+    console.log(person.age); //28
+
+    // update object
+    person.age=25;
+</script>
+
+</body>
+</html>
