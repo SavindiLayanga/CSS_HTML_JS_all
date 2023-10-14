@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery events</title>
+
+    <!-- <style>
+         #circle{
+             border-radius: 100%;
+             width: fit-content;
+             padding: 20px;
+             background-color: white;
+             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+         }
+
+         .SwitchOn{
+             background-color: yellow;
+             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+         }
+     </style>-->
+
+    <style>
+        #box1 {
+            width: 100px;
+            aspect-ratio: 1/1;
+            background: #b6d4fe;
+            border: 1px solid darkblue;
+        }
+
+        #box2 {
+            width: 50px;
+            aspect-ratio: 1/1;
+            background: #6f42c1;
+            border: 1px solid #ff4d96;
+        }
+
+    </style>
+</head>
+<body>
+
+<!--<button type="button">Click!</button>-->
+
+<!--<h1>0</h1>
+<button type="button">Click !</button>
+<button type="button">Reset</button>-->
+
+<!--<div id="circle"></div>
+<button type="button" id="switch">OFF</button>-->
+
+<!--<br>
+<h1></h1>
+<input type="text" id="text">-->
+
+<!--<br>
+<input type="button">
+<button type="button" id="btn">send</button>-->
+
+<h1 id="text1">0</h1>
+<button type="button" id="btn1">Click!</button>
+
+
+<br>
+<br>
+
+<div id="box1">
+    <div id="box2"></div>
+</div>
+
+<br>
+<br>
+
+<button type="button" id="btn2">Click Me!</button>
+
+<br>
+<br>
+
+<label>Enter your Name</label>
+<input type="text" id="input2">
+
+<br>
+<br>
+
+<input type="text" id="input3">
+
+<br>
+<br>
+
+<input type="radio" name="radioInput" value="GDSE" id="gdse"></input>
+<label for="gdse">GDSE</label>
+<input type="radio" name="radioInput" value="DEP" id="dep"></input>
+<label for="dep">DEP</label>
+
+<script src="assets/lib/jquery.min.js"></script>
+
+<script>
+
+    // $ ("button").on('click' , () => {
+    //  console.log("Clicked");
+    //})
+
+    /* var count=0;
+
+     $("button").eq(0).on('click', () => {
+         count++;
+         $("h1").text(count);
+
+     })
+     $("button").eq(1).on('click', () => {
+         count=0;
+         $("h1").text(count);
+
+     })*/
+
+    /* var isOn=false;
+
+      $("#switch").on('click',() => {
+
+          if(isOn){
+              isOn=false;
+              $("switch").text("OFF");
+              $("circle").removeClass("SwitchOn");
+          }else {
+              isOn=true;
+              $("switch").text("ON");
+              $("circle").addClass("SwitchOn");
+          }
+      });*/
+
+    /*  $("input").on()*/
+
+    /*    $("input").on("input" , (event) => {
+
+     });
+
+     $("#btn").on("click" , () => {
+         var value = $ ("input").val();
+         console.log(value);
+     });*/
+
+    // $("#btn1").on("click", () => {
+    //    console.log("hello!");
+    // });
+
+    /* ------------- dblclick ------------- */
+    $("#btn1").on("dblclick", () => {
+        console.log("hello!");
+    });
+
+    /* ------------- mouseenter ------------- */
+
+    $("#box1").on("mouseenter", () => {
+        console.log("Mouse Enter");
+    });
+
+    /* ------------- mouseleave ------------- */
+
+    $("#box1").on("mouseleave", () => {
+        console.log("Mouse Leave");
+    });
+
+    /* ------------- mouse down ------------- */
+
+    $("#box2").on("mousedown", () => {
+        console.log("Mouse down");
+    });
+
+    /* ------------- mouse up ------------- */
+
+    $("#box2").on("mouseup", () => {
+        console.log("Mouse up");
+    });
+
+    /* ------------- mouse click ------------- */
+
+    $("#btn2").on("click", () => {
+        console.log("Mouse pressed!");
+    });
+
+    $("#box2").on("mouseover", () => {
+        console.log("Mouse over");
+    });
+
+    $("#input2").on("focus", () => {
+        console.log("focused !");
+        $("#input2").css("background","red");
+    });
+
+    $("#input2").on("blur", () => {
+        $("#input2").css("background","yellow");
+    });
+
+    $("#input3").on("keyup", () => {
+        console.log("key up !");
+    });
+
+    $("#input2").on("keydown", (event) => {
+        let keyCode = event.which;
+        if(keyCode == 13){
+            console.log("key down !");
+        }
+    });
+
+    $("input[name='radioInput']").on("change", (event) => {
+        console.log(event.target.value);
+    });
+
+
+
+</script>
+</body>
+</html>
