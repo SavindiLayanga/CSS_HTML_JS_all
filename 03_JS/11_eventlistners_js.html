@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        #circle {
+            width: 50px;
+            aspect-ratio: 1/1;
+            border: 1px solid lightgray;
+            border-radius: 100%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .switchOn {
+            background: yellow;
+            box-shadow: 0px 0px 5px 10px yellow;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<h1>0</h1>
+
+<button type="button">Click!</button>
+<button type="reset">Reset</button>
+
+<!-- ----------------------------------------------- -->
+
+<div id="circle"></div>
+<button type="button" id="switch">OFF</button>
+
+<!-- ----------------------------------------------- -->
+
+<br>
+<br>
+
+<h1></h1>
+
+<input type="text">
+
+<!-- ----------------------------------------------- -->
+
+<br>
+<br>
+
+<h1></h1>
+
+<input type="text">
+<button type="button" id="btn">Show</button>
+
+<!-- ----------------------------------------------- -->
+
+<br>
+<br>
+
+<input type="password" id="password-field">
+<button type="button" id="password-show-btn">Show</button>
+
+<script>
+
+    var count = 0;
+
+    document.getElementsByTagName("button")[0].addEventListener('click', function () {
+        ++count;
+        document.getElementsByTagName("h1")[0].innerText = count;
+    });
+
+    document.getElementsByTagName("button")[1].addEventListener('click', function () {
+        count=0;
+        document.getElementsByTagName("h1")[0].innerText = count;
+    });
+
+    // -------------------------------------------------------------
+
+    var isOn = false;
+    document.getElementById("switch").addEventListener('click', () => {
+        if(isOn) {
+            isOn = false;
+            document.getElementById("switch").innerText = "OFF";
+            document.getElementById("circle").classList.remove("switchOn");
+        } else {
+            isOn = true;
+            document.getElementById("switch").innerText = "ON";
+            document.getElementById("circle").classList.add("switchOn");
+        }
+    })
+
+    // -------------------------------------------------------------
+
+    document.getElementsByTagName("input")[0].addEventListener("input", (event) => {
+        document.getElementsByTagName("h1")[1].innerText = event.target.value;
+    })
+
+    // -------------------------------------------------------------
+
+    document.getElementById("btn").addEventListener('click', () => {
+        var value = document.getElementsByTagName("input")[1].value;
+        document.getElementsByTagName("h1")[2].innerText = value;
+    })
+
+    // -------------------------------------------------------------
+    document.getElementById("password-show-btn").addEventListener('click', () => {
+        var type = document.getElementById("password-field").getAttribute("type");
+        if(type === "password") {
+            document.getElementById("password-field").setAttribute("type", "text");
+        } else {
+            document.getElementById("password-field").setAttribute("type", "password");
+        }
+    })
+
+</script>
+
+</body>
+</html>
